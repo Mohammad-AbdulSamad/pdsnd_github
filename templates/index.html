@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BikeShare Data Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>Filter Options</h1>
+      <form id="filter-form">
+        <label for="city">Choose a city:</label>
+        <select name="city" id="city">
+          <option value="chicago">Chicago</option>
+          <option value="new york city">New York</option>
+          <option value="washington">Washington</option>
+        </select>
+
+        <label for="month">Filter by Month:</label>
+        <select name="month" id="month">
+          <option value="all">All</option>
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+        </select>
+
+        <label for="day">Filter by Day:</label>
+        <select name="day" id="day">
+          <option value="all">All</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
+
+        <button id="filterButton" type="submit">Generate</button>
+
+      </form>
+
+      <div id="results"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+      <div  id="title-container"class="card">
+        <h1 id="title-header">Bike Share Data Dashboard</h1>
+        <h3 id="title-sub">Explore and analyze data from Chicago, New York City, and Washington</h3>
+
+
+      </div>
+
+      <!-- Table Card -->
+      <div class="card">
+        <h2>Raw Data Table</h2>
+        <table>
+          <thead>
+            </thead>
+          <tbody id="dataTableBody">
+            <!-- Dynamic rows will be injected here -->
+          </tbody>
+        </table>
+        <div class="pagination">
+        <button class='pagination-buttons' id="prevBtn">Previous</button>
+        <button class='pagination-buttons' id="nextBtn">Next</button>
+      </div>
+      </div>
+
+      <!-- Insights Card -->
+      <div class="card">
+        <h2>Insights</h2>
+
+        <div class="row">
+        <div class="section-container">
+          <h2>Trip duration</h2>
+        <div class="charts-container">
+
+          <div class="card2-box">
+            <p class="text-title">Total Travel Time</p>
+            <p id="totalTravelTime" class="text-sub"></p>
+          </div>
+
+          <div class="card2-box">
+            <p class = "text-title">Average Travel Time</p>
+            <p id="averageTravelTime" class="text-sub"></p>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Section 2 -->
+          <div class="section-container">
+            <h2>Popular stations and trip</h2>
+          <div class="charts-container">
+
+            <div class="card2-box">
+              <p class="text-title"> Most common start station</p>
+            <p id="commonStartStation" class="text-sub"></p>
+            </div>
+            <div class="card2-box">
+              <p class="text-title">Most common end station</p>
+              <p id="commonEndStation" class="text-sub"></p>
+            </div>
+            <div class="card2-box">
+              <p class="text-title">Most common trip</p>
+             <p id="commonTrip" class="text-sub"></p>
+            </div>
+          </div>
+            </div>
+
+           </div>
+
+
+
+        <div class="row">
+          <div class="section-container">
+            <h2>User Information</h2>
+            <div class="charts-container" id="userTypes">
+
+            </div>
+          </div>
+
+        <div class="section-container">
+            <h2>Birth Years</h2>
+            <div class="charts-container" id="birthYears">
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+       <!-- Inside your "Insights Card" where you have charts -->
+
+<div class="charts-container">
+  <div class="chart-box">
+    <h2>Daily Usage</h2>
+
+    <p id="mostCommonDay"></p>
+     <p class="chart-title"> Most common day</p>
+    <canvas id="dailyChart" width="600" height="300"></canvas>
+
+  </div>
+
+  <div class="chart-box">
+    <h2>Hourly Usage</h2>
+
+    <p id="mostCommonHour"></p>
+    <p class="chart-title"> Most common hour</p>
+    <canvas id="hourlyChart" ></canvas>
+
+  </div>
+
+  <div class="chart-box">
+    <h2>Monthly Usage</h2>
+
+    <p id="mostCommonMonth"></p>
+    <p class="chart-title"> Most common Month</p>
+    <canvas id="monthlyChart" ></canvas>
+
+  </div>
+
+  <div id="genderChartContainer" class="chart-box">
+    <h2>Gender</h2>
+    <canvas id="genderChart" ></canvas>
+  </div>
+
+
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+</body>
+</html>

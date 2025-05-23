@@ -1,1 +1,4 @@
 .github/**
+
+# Ignore the data directory
+data/

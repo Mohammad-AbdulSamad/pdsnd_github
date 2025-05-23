@@ -1,0 +1,268 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+  background: #f4f4f4;
+}
+
+#title-container{
+background-color: #f4f0fc;
+
+}
+
+#title-sub{
+color: grey;
+
+}
+
+#title-header {
+    color: #471073;
+}
+.container {
+  display: flex;
+  height: 100vh;
+
+}
+
+.sidebar {
+  width: 250px;
+background: #0a0d39;
+ padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+label, select {
+  display: block;
+  margin-bottom: 15px;
+  font-size: large;
+}
+
+label{
+color: white;
+}
+
+select{
+    color: #0a0d39;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+h1{
+color: white;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+thead th {
+  background-color: #f4f0fc;
+  color: #471073;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-size: larger;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #faf7ff; /* light lavender tone */
+  font-weight: 400;
+
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+  font-weight: 500;
+  }
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #471073;
+  font-size: large;
+}
+
+/* Optional: Hover effect */
+tbody tr:hover {
+  background-color: #f0e8ff;
+  transition: background-color 0.2s ease;
+}
+
+h2, h3 {
+  margin-top: 0;
+  color: #471073;
+  font-weight: bolder;
+}
+
+.insight-section p {
+  margin: 5px 0;
+}
+
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.card2-box {
+  flex: 1 1 150px;
+    /* height: 200px; */
+    height: ;
+    max-height: 100%;
+    background: rgba(153, 102, 255, 1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(153, 102, 255, 1);
+
+}
+
+.chart-box {
+  flex: 1 1 350px; /* Grow, shrink, and minimum 300px wide */
+height: fit-content;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chart-box h2 {
+padding-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+ border-bottom-style: solid;
+     border-bottom-width: thin;
+ border-color: rgba(153, 102, 255, 1);
+}
+
+canvas {
+  width: 100% !important;
+  height: 90% !important;
+}
+
+.text-sub{
+
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+.text-title{
+font-size: larger;
+    color: white;
+    font-weight: 500;
+}
+
+.section-container{
+   flex: 1 1; /* Grow, shrink, and minimum 300px wide */
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+}
+
+.row{
+display: flex;
+
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#mostCommonMonth{
+color: rgba(153, 102, 255, 1);
+font-weight: bold;
+font-size: xx-large;
+margin-bottom: 0px;
+}
+
+#mostCommonDay{
+color: rgba(153, 102, 255, 1);
+font-weight: bold;
+font-size: xx-large;
+margin-bottom: 0px;
+}
+#mostCommonHour{
+color: rgba(153, 102, 255, 1);
+font-weight: bold;
+font-size: xx-large;
+margin-bottom: 0px;
+}
+.chart-title{
+font-size: large;
+color: #70607d;
+margin-top: 0px;
+margin-bottom: 35px;
+
+}
+
+#filterButton{
+    width: 100%;
+    margin-top: 20px;
+    font-size: larger;
+    /* font-weight: bold; */
+    /* color: rgba(153, 102, 255, 1); */
+    background-color: rgba(153, 102, 255, 1);
+    font: white;
+    color: white;
+    padding: 10px;
+    border-radius: 17px;
+
+}
+.pagination {
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    display: flex;
+    gap: 20px;
+    }
+.pagination-buttons{
+    width: 15%;
+    margin-top: 20px;
+    font-size: larger;
+    /* font-weight: bold; */
+    /* color: rgba(153, 102, 255, 1); */
+    /* background-color: rgba(153, 102, 255, 1); */
+    background-color: #0a0d39;
+    font: white;
+    color: white;
+    padding: 10px;
+    border-radius: 17px;
+}
