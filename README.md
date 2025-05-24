@@ -1,3 +1,6 @@
+<!-- Create by Mohammad Abdul-Samad-->
+
+>>>>>>> 6cb17f1 (docs: Add author comment with name to README.md)
 ### Date created
 5/24/2025
 
