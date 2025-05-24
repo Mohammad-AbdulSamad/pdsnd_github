@@ -6,7 +6,7 @@ body {
                Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 
-  background: #f4f4f4;
+  background: #f9f5f5;
 }
 
 #title-container{
@@ -136,7 +136,7 @@ h2, h3 {
 .card2-box {
   flex: 1 1 150px;
     /* height: 200px; */
-    height: ;
+    
     max-height: 100%;
     background: rgba(153, 102, 255, 1);
     padding: 20px;
