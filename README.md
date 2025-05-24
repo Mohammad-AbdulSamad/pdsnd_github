@@ -1,3 +1,4 @@
+<!-- Created by Mohammad Abdul-Samad-->
 ### Date created
 5/24/2025
 
@@ -27,7 +28,8 @@ This project is a Flask-based web application for analyzing US bikeshare data. I
 - Clean HTML/CSS frontend
 
 - Organized Flask backend with modular structure
-- Used modern design for the UI and colors.
+
+- Used modern design for the UI and colors
 
 ## 📌 Important Notes
 - The charts and stats are generated based on city + optional time filters (month and/or day).
