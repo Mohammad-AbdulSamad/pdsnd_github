@@ -4,7 +4,7 @@ let monthlyChartInstance;
 let genderChartInstance;
 let userTypeChartInstance;
 let allRows = [];  // from fetch
-const rowsPerPage = 5;
+const rowsPerPage = 6;
 let currentPage = 1;
 let currentCity = 'chicago';
 
